@@ -18,6 +18,8 @@ def truncate_text(text, max_length=100):
     """
     如果文本长度超过 max_length，则截断并在末尾添加 '...'
     """
+    if text is None:
+        return "";
     if len(text) > max_length:
         return text[:max_length] + "..."
     return text
